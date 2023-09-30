@@ -1,0 +1,21 @@
+ALGORITHM sentence
+VAR
+    str := "hello world."
+    nb_vow :=0 ;
+    nb_word :=0 ;
+    nb_char :=0 ;
+    i := 0 ;
+BEGIN
+    FOR i FOR 0 TO str.lengh -1 STEP 1 DO
+        IF (str[i] = "a" OR str[i] = "e" OR str[i] = "u" OR str[i] ="i" OR str[i] = "o") THEN
+            nb_vow = nb_vow +1
+        END_IF
+        IF (str[i] = " ") THEN
+            nb_word = nb_word+1
+        END_IF
+        nb_char:=nb_char+1
+    END_FOR
+    write("number vow = " , nb_vow  ) 
+    write("number word = " , nb_word +1)
+    write("number char = " , nb_char  )   
+END
